@@ -44,8 +44,8 @@
 
 /* Apply background color and image to body */
 body {
-  background-color: #0f201d; /* Dark green background */
-  background-image: url('../public/queue.png'); /* Path to your image */
+  background-color: #d4a3a3; /* Dark green background */
+; /* Path to your image */
   background-size: cover; /* Cover the whole screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Don't repeat the background image */

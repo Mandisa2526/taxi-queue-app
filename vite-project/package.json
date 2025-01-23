@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node main.tsx"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.3.3",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/roboto": "^5.1.1",
+    "@mui/icons-material": "^6.4.1",
+    "@mui/material": "^6.4.1",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.18.0",
     "react": "^18.3.1",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.1",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
@@ -27,6 +32,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "playwright": "^1.49.1",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
