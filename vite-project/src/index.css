@@ -1,0 +1,46 @@
+
+/* In index.css */
+@media (max-width: 768px) {
+  .app-wrapper {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-wrapper {
+    padding: 1rem;
+  }
+}
+/* Global styles for queue sections */
+.queue-section {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.queue-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Specific styles for Passenger Queue */
+.passenger-section {
+  background-color: #e0f7fa;
+  border-color: #4dd0e1;
+}
+
+/* Specific styles for Taxi Queue */
+.taxi-section {
+  background-color: #e8f5e9;
+  border-color: #66bb6a;
+}
+.container{
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
