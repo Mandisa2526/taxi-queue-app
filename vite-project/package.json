@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node main.tsx"
+    "start": "node main.tsx",
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.3.3",
