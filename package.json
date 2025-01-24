@@ -2,7 +2,7 @@
   "name": "taxi-queue",
   "version": "1.0.0",
   "description": "",
-  "main": "taxi-queue.js",
+  "main": "../src/main.tsx",
   "directories": {
     "test": "test"
   },
