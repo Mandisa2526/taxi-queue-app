@@ -1,0 +1,23 @@
+# Site Settings
+title: Your Site Title
+description: A description of your site for SEO
+baseurl: "/docs" # If your site is served from the /docs directory
+url: "https://Mandisa2526.github.io" # Replace with your GitHub Pages URL
+
+# Build Settings
+theme: jekyll-theme-primer # Choose a theme
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-relative-links
+
+# Pagination Settings
+paginate: 5
+paginate_path: "/page:num/"
+
+# Markdown Settings
+markdown: kramdown
+kramdown:
+  input: GFM
