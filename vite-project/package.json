@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": " node main.tsx",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -26,7 +30,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "^1.50.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
@@ -35,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
+    "jest-localstorage-mock": "^2.4.26",
     "playwright": "^1.49.1",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
