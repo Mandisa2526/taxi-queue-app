@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "main": " node main.tsx",
+  "homepage": "https://github.com/Mandisa2526/taxi-queue-app",
+
   "directories": {
     "test": "test"
   },
@@ -14,7 +16,7 @@
     "preview": "vite preview",
     "start": "node main.tsx",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist --add"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.3.3",
