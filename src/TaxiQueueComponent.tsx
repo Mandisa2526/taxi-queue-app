@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Box, Typography } from "@mui/material";
 import { TaxiQueue as TaxiQueueLogic, ITaxiQueue } from "../src/taxi-queue";
-import PassengerQueue from "../components/PassengerQueue";
-import TaxiQueue from "../components/TaxiQueue";
-import TaxiDepart from "../components/TaxiDepart";
+import PassengerQueue from "./components/PassengerQueue";
+import TaxiQueue from "./components/TaxiQueue";
+import TaxiDepart from "./components/TaxiDepart";
 import "./index.css";
 import { Button } from "@mui/material";
 import RestartAltSharpIcon from "@mui/icons-material/RestartAltSharp";

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import QueImage from "../public/minivan.png";
 import ArrowCircleRightSharpIcon from "@mui/icons-material/ArrowCircleRightSharp";
-import "../src/index.css";
+import "../index.css";
 
 interface TaxiQueueProps {
   taxiCount: number;

@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import QueImage from "../public/queue.png";
 import ArrowCircleRightSharpIcon from "@mui/icons-material/ArrowCircleRightSharp";
 import ArrowCircleLeftSharpIcon from "@mui/icons-material/ArrowCircleLeftSharp";
-import "../src/index.css";
+import "../index.css";
 interface PassengerQueueProps {
   passengerCount: number;
   onJoinQueue: () => void;

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import ArrowImage from "../public/arrow.png";
 import DepartureBoardIcon from "@mui/icons-material/DepartureBoard";
-import "../src/index.css";
+import "../index.css";
 
 interface TaxiDepartProps {
   onTaxiDepart: () => void;
