@@ -1,63 +1,50 @@
-# Taxi queue app
+# React + TypeScript + Vite
 
-A local taxi association needs some help to manage queues at some of their taxi ranks.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<span style="float: left">
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="queue.png" alt="" width="100" style="display:inline-block" >
-	<img src="minivan.png" alt="" width="100" style="display:inline-block">
-	<img src="arrow.png" alt="" width="100" style="display:inline-block">
-	<img src="minivan.png" alt="" width="100" style="display:inline-block">
-</span>
+Currently, two official plugins are available:
 
-They need a web widget which rank managers can use to keep track of how many people are joining and leaving taxi queues. They also want to keep track of how many taxis are queueing.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Instructions
+## Expanding the ESLint configuration
 
-The widget should keep track off:
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-* People joining the queue 
-	- add 1 to the queue
-* People leaving the queue 
-	- remove 1 from the queue
-* Taxis joining the queue 
-	- add 1 to the taxi queue
-* Taxis leaving the queue:
-	- remove 1 from the taxi queue
-	- remove 12 people from the people queue
-* A taxi can only leave if there are enough people (12 people) in the queue to fill the taxi.
+- Configure the top-level `parserOptions` property like this:
 
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## Instructions
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-* Make all the unit tests pass in `taxi-queue.test.js`. Run the tests from `test/index.html`.
-* HTML & CSS for this widget in `index.html`
-* Some failing unit tests that you need to stop failing by implementing the TaxiQueue Factory Function in `taxi-queue.js`. Don't change the test file `test/taxi-queue.test.js`
-* A Factory function skeleton is in the `taxi-queue.js` file.
-* Implement the DOM functionality in the `taxi-queue.dom.js` file.
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-## Add localStorage
-
-Once your widget is done store all the queue counters in localStorage be sure that the data is shown correctly after a refresh.
-### Add a unit test for localStorage
-Add a unit test/s to show that your Factory Function's constructor can initialize the people and taxi queue count.
-
-## For & clone
-
-Fork and clone this repo.
-
-## Work submission
-
-Check your EMAIL for the links to submit your GitHub Pages URL and the URL to your GitHub repository on feedback.projectcodex.co.
-Loadshedding
-
-If you are working remotely and you are experiencing load shedding please let us know in advance.
-Planning
-
-Spend the first 30 minutes of your assessment on planning. Read through all the different scenarios & create a Kanban Board with the tasks you think you need to complete. Email a link to your Kanban board to mentors@projectcodex.co. Create pseudo code using code comments to help you think through what you need to do.
-Ask for help
-
-Ask if you need help or clarity
-	
-And make sure you submit your final links by latest **16h00**.
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
